@@ -1,0 +1,186 @@
+body, html {
+    background-size: cover;
+    background: url('./images/bgImage.jpg') no-repeat center center fixed;
+    min-width: 330px;
+    /*specify,html as well to make the centering of the box work with that styling*/
+    /*min-width: 475px;*/
+}
+
+#box {
+    border-radius: 50%;
+    border: 3px solid #462a1e;
+    bottom: 0;
+    box-shadow: 0 0 3px 1.5px #462a1e;
+    height: 80vmin;
+    left: 0;
+    margin: auto;
+    min-height: 320px;
+    min-width: 320px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80vmin;
+}
+
+#green {
+    background-color: #00A74A;
+    border-radius: 100% 0 0 0;
+    float: left;
+    height: 50%;
+    margin: 0;
+    width: 50%;
+}
+
+#red {
+    background-color: #9F0F17;
+    border-radius: 0 100% 0 0;
+    float: right;
+    height: 50%;
+    margin: 0;
+    width: 50%;
+}
+
+#blue {
+    background-color: #094A8F;
+    border-radius: 0 0 100% 0;
+    float: right;
+    height: 50%;
+    margin: 0;
+    width: 50%;
+}
+
+#yellow {
+    background-color: #CCA707;
+    border-radius: 0 0 0 100%;
+    float: left;
+    height: 50%;
+    margin: 0;
+    width: 50%;
+}
+
+#green:active {
+    box-shadow: inset -0.5px 1px 1px 1.5px #462a1e;
+    /*slightly different shadow settings for the green quadrant
+  to avoid the optical illusion of it rotating slightly downwards,
+  counterclockwise*/
+}
+
+#red:active, #blue:active, #yellow:active {
+    box-shadow: inset 0px 0px 1px 1.5px #462a1e;
+}
+
+#announcement {
+    background-color: #DFF0D8;
+    border-radius: 20px;
+    border: 2px solid grey;
+    color: #323232;
+    display: none;
+    font-family: Helvetica, Arial;
+    font-size: 8vmin;
+    height: 40%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+    z-index: 2;
+}
+
+#center {
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #462a1e;
+    /*was 2px*/
+    box-shadow: 0 0px 2px 1px #462a1e;
+    height: 40%;
+    left: 29.9%;
+    position: absolute;
+    top: 29.9%;
+    /*lower top and left (than30%) due to the extra border*/
+    width: 40%;
+}
+
+#title {
+    color: #323232;
+    font-size: 5vmin;
+    font-weight: 600;
+    margin-bottom: 12%;
+    text-align: center;
+}
+
+#buttonBox {
+    text-align: center;
+}
+
+#counter {
+    background-color: #32050C;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    box-shadow: 0 0 2px 1px gray;
+    color: #430710;
+    display: inline-block;
+    font-family: 'Geostar Fill';
+    font-size: 3vmin;
+    height: 4vmin;
+    line-height: 4vmin;
+    text-align: center;
+    vertical-align: top;
+    /*without this the div would have no
+  baseline and when we would put text inside the div the
+  entire div would get pushed down; with this the div stays
+  in place when it has text too, and the text inside is
+  vertically-aligned to top;
+  http://stackoverflow.com/questions/14854725/div-moves-when-i-put-text-in-it
+  */
+    width: 6vmin;
+}
+
+#numbers {
+    text-align: center;
+}
+
+#start {
+    background-color: #cc0000;
+    border-radius: 50%;
+    border: 2px solid grey;
+    box-shadow: 0 1px 2px 1px #939393;
+    display: inline-block;
+    height: 4vmin;
+    margin: 0 9%;
+    width: 4vmin;
+}
+
+#strict {
+    background-color: #FFFF00;
+    border-radius: 50%;
+    border: 2px solid grey;
+    box-shadow: 0 1px 2px 1px #939393;
+    display: inline-block;
+    height: 4vmin;
+    width: 4vmin;
+}
+
+#onOff {
+    background-color: #222222;
+    box-shadow: 0 0 2px 1px #222222;
+    height: 2.5vmin;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16%;
+    width: 6vmin;
+}
+
+#switch {
+    background-color: #3193DE;
+    box-shadow: 0 0 3px 1.5px #939393;
+    float: left;
+    height: 100%;
+    width: 45%;
+}
+
+#switch:hover, #red:hover, #green:hover, #blue:hover, #yellow:hover, #start:hover, #strict:hover {
+    cursor: pointer;
+}
+
+#switch:active, #start:active, #strict:active {
+    box-shadow: 0 0 1px 0.5px darkgray;
+}
